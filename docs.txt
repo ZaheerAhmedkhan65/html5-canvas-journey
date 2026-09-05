@@ -1,0 +1,7 @@
+Player Image width = 6876px;
+Player Image height = 5230px;
+
+it has 12 columns and 10 rows.
+
+a single sprite width = 6876 / 12 = 573
+a single sprite height = 5230 / 10 = 523
