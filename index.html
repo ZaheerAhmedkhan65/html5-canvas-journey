@@ -3,27 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sprite Animations</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>HTML5 Canvas Mini Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #a8c0cc;
+            font-size: 1.1rem;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            max-width: 900px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 30px;
+            width: 320px;
+            text-decoration: none;
+            color: #fff;
+            transition: transform 0.25s ease, background 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        .card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #a8c0cc;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .card .tags span {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            margin-right: 6px;
+        }
+
+        footer {
+            margin-top: 60px;
+            color: #6f8b99;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: #8fc1d4;
+        }
+    </style>
 </head>
 <body>
-    <canvas id="canvas1"></canvas>
-    <div class="controls">
-        <label for="animations">Choose Animation:</label>
-        <select id="animations" name="animations">
-            <option value="idle">Idle</option>
-            <option value="jump">Jump</option>
-            <option value="fall">Fall</option>
-            <option value="run">Run</option>
-            <option value="dizzy">Dizzy</option>
-            <option value="sit">Sit</option>
-            <option value="roll">Roll</option>
-            <option value="bite">Bite</option>
-            <option value="ko">KO</option>
-            <option value="getHit">Get Hit</option>
-        </select>
-    </div>
-    
-    <script src="./script.js"></script>
+    <header>
+        <h1>🎮 HTML5 Canvas Mini Projects</h1>
+        <p>A collection of mini projects for learning HTML5 Canvas &amp; vanilla JavaScript game techniques</p>
+    </header>
+
+    <main class="projects">
+        <a class="card" href="./sprite-animation/index.html">
+            <div class="icon">🐕</div>
+            <h2>Sprite Animation</h2>
+            <p>
+                Animate a Shadow Dog character from a single sprite sheet —
+                10 switchable animations (idle, run, jump, KO…) built with
+                canvas frame cropping and requestAnimationFrame.
+            </p>
+            <div class="tags">
+                <span>Canvas 2D</span><span>Sprite Sheets</span><span>Game Loop</span>
+            </div>
+        </a>
+
+        <a class="card" href="./parallax/index.html">
+            <div class="icon">🌄</div>
+            <h2>Parallax Backgrounds</h2>
+            <p>
+                Fake depth in 2D games with 5 stacked background layers
+                scrolling at different speeds, plus a live game-speed
+                slider from 0 to 20.
+            </p>
+            <div class="tags">
+                <span>Canvas 2D</span><span>Parallax</span><span>ES6 Classes</span>
+            </div>
+        </a>
+    </main>
+
+    <footer>
+        Built while learning HTML5 games &amp; Canvas — source on
+        <a href="https://github.com/ZaheerAhmedkhan65/sprite-animation">GitHub</a>
+    </footer>
 </body>
 </html>
